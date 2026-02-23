@@ -449,7 +449,7 @@ router.post('/:id/apply', protect, asyncHandler(async (req, res) => {
     });
   }
 
-  const group = await Group.findById(req.params id);
+  const group = await Group.findById(req.params.id);
 
   if (!group) {
     return res.status(404).json({
